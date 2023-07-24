@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --env port=3000",
+    "start": "webpack serve --env port=3000 mode=development",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development"
   },
@@ -22,9 +22,14 @@
   "homepage": "https://github.com/utimur/production_project_code_source#readme",
   "devDependencies": {
     "@types/node": "^17.0.45",
+    "@types/react-dom": "^18.2.7",
     "@types/webpack": "^5.28.1",
     "@types/webpack-dev-server": "^4.7.2",
+    "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.64.1",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
     "ts-loader": "^9.4.4",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6",
@@ -33,7 +38,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
