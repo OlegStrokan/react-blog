@@ -1,4 +1,5 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 import { render } from "react-dom";
-import { Counter } from "./components/Counter";
-render(_jsx("div", { children: _jsx(Counter, {}) }), document.getElementById("root"));
+import { App } from "./App";
+import { BrowserRouter } from "react-router-dom";
+render(_jsx(BrowserRouter, { children: _jsx(App, {}) }), document.getElementById("root"));
