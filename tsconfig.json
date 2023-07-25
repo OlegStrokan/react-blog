@@ -8,6 +8,9 @@
     "allowJs": true,
     "moduleResolution": "node",
     "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
     // позволяет использовать import/export вместо require/module.export
     "esModuleInterop": true,
     // поддержка default import ( можем не писать import * as path form 'path')
