@@ -1,7 +1,13 @@
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-export var buildLoaders = function (options) {
-    var isDev = options.isDev;
-    var cssLoader = {
+export cosnt buildLoaders = function (options) {
+
+    const svgLoader = {
+        test: /\.svg$/,
+        use: ['@svgr/webpack']
+
+    }
+    const isDev = options.isDev;
+    const cssLoader = {
         test: /\.s[ac]ss$/i,
         use: [
             isDev ? "style-loader" : MiniCssExtractPlugin.loader,
@@ -19,10 +25,13 @@ export var buildLoaders = function (options) {
             "sass-loader",
         ],
     };
-    var typescriptLoader = {
+
+    const typescriptLoader = {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/,
     };
+
+    const 
     return [typescriptLoader, cssLoader];
 };
