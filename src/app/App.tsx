@@ -1,8 +1,9 @@
 import "./styles/index.scss";
 import { useTheme } from "app/providers/ThemeProvider/lib/useTheme";
 import { classNames } from "shared/lib/classNames/classNames";
-import { AppRouter } from "./providers/router";
 import { Navbar } from "widgets/Navbar";
+import { AppRouter } from "app/providers/router";
+import { Sidebar } from "widgets/Sidebar";
 
 export const App = () => {
   const { theme } = useTheme();
@@ -12,7 +13,10 @@ export const App = () => {
       className={classNames("app", { hovered: true, selected: false }, [theme])}
     >
       <Navbar />
-      <AppRouter />
+      <div className="content-page">
+        <Sidebar />
+        <AppRouter />
+      </div>
     </div>
   );
 };
